@@ -1,0 +1,58 @@
+.card {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 1.25rem;
+	transform: scale(1);
+	transition-duration: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+	transition-duration: 0.5s;
+}
+
+.card-cover-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    filter: brightness(70%);
+}
+
+.card-title {
+    z-index: 1;
+    position: absolute;
+    bottom: 1rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 142.6%;
+}   
+
+.card,
+.card-cover-wrapper img {
+	height: 15.9375rem;
+	@include desktop-breakpoint {
+		width: 21.25rem;
+		height: 21.25rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.card {
+        position: static;
+		margin: 0;
+    }
+
+    .card-title {
+        bottom: 1.25rem;
+    }
+
+    .card,
+    .card-cover-wrapper img {
+		width: 21.25rem;
+		height: 21.25rem;
+
+    }
+}
