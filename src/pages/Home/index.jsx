@@ -1,7 +1,7 @@
 import homeBanner from '../../assets/home-banner.jpg'
 import './index.css'
 import Card from '../../components/Card'
-import logement from '../../data/data.json'
+import logements from '../../data/data.json'
 
 
 function Home(){
@@ -12,7 +12,7 @@ function Home(){
 				<h1 className="banner-title">Chez vous, partout et ailleurs</h1>
 			</div>
             <div className="card-wrapper">
-                {logement.map((logement) => (
+                {logements.map((logement) => (
 				    <Card
 					    key={`${logement.title}-${logement.id}`}
 					    link={`/accomodation/${logement.id}`}

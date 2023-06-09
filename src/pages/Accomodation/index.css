@@ -1,0 +1,111 @@
+.accomodation-title {
+    margin-top: 0.9375rem;
+    margin-bottom: 0;
+    color: #ff6060;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 142.6%;
+}
+
+.accomodation-location {
+    margin-top: 0.3125rem;
+    margin-bottom: 0;
+    color: #ff6060;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 142.6%;
+}
+
+
+.host-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.host-name {
+    margin-right: 0.75rem;
+    color: #ff6060;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: end;
+}
+
+.host-picture {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+.image {
+    border-radius: .625rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .accomodation-title {
+        font-size: 2.25rem;
+    }
+
+    .accomodation-location {
+        margin-bottom: 1.25rem;
+        font-size: 1.125rem;
+    }
+
+    .accomodation-info-wrapper {
+        width: 60%;
+    }
+
+    .host-wrapper {
+        order: 1;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .description-equipments-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }  
+    
+    .host-name {
+        height: 4rem;
+        font-size: 1.125rem;
+        line-height: 150%;
+
+    }
+
+    .host-picture {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .description-equipments-wrapper .collapse {
+        border-radius: 0.625rem;
+    }
+    
+    .description-equipments-wrapper .collapse-section {
+        width: 47%;
+        padding: 0;
+    }
+    
+    .description-equipments-wrapper .collapse-title {
+        font-size: 1.125rem;
+    }
+    
+    .description-equipments-wrapper .collapse-icon {
+        margin-right: 0.75rem;
+    }
+    
+    .description-equipments-wrapper .collapse-text {
+        padding-top: 1.875rem;
+        padding-right: 1.25rem;
+        padding-bottom: 1.875rem;
+        padding-left: 1.25rem;
+        font-size: 1.125rem;
+    }
+    
+    .image{
+        height: 25.9375rem;
+    }
+
+}
