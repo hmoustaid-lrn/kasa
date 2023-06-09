@@ -2,7 +2,8 @@ import React from 'react'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 import Home from './pages/Home'
 import Error from './pages/Error'
@@ -13,7 +14,7 @@ function Router() {
 	return (
 		<React.StrictMode>
 			<BrowserRouter basename="/kasa">
-
+				<Header />
 				<Routes>
 					<Route exact path="/" element={<Home />} />
 					<Route
@@ -26,7 +27,7 @@ function Router() {
 
 					<Route path="*" element={<Error />} />
 				</Routes>
-
+				<Footer />
 			</BrowserRouter>
 		</React.StrictMode>
 	)

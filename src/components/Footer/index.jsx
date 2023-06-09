@@ -1,4 +1,4 @@
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo-transparent.svg'
 import './index.css'
 
 function Footer() {
