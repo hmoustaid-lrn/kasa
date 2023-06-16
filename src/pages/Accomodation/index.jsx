@@ -3,6 +3,7 @@ import logements from '../../data/data.json'
 import Collapse from '../../components/Collapse'
 import './index.css'
 import Error from '../../pages/Error'
+import Rating from '../../components/Rating'
 
 function Accomodation(){
     const { accomodationId } = useParams()
@@ -19,24 +20,29 @@ function Accomodation(){
     return(
         <section>
             <img src={accomodation.pictures[0]} alt= "test" class="image"/>
+				<div className="annonce-info-rating-host-wrapper">
 					<div className="accomodation-info-wrapper">
 						<h1 className="accomodation-title">{accomodation.title}</h1>
 						<p className="accomodation-location">
 							{accomodation.location}
 						</p>
 					</div>
-					<div className="host-wrapper">
-						<div className="host-name">
-							{firstName}
-							<br />
-							{lastName}
+					<div className="rating-host-wrapper">
+						<Rating rating={accomodation.rating} />
+						<div className="host-wrapper">
+							<div className="host-name">
+								{firstName}
+								<br />
+								{lastName}
+							</div>
+							<img
+								className="host-picture"
+								src={accomodation.host.picture}
+								alt="Host"
+							/>
 						</div>
-						<img
-							className="host-picture"
-							src={accomodation.host.picture}
-							alt="Host"
-						/>
 					</div>
+				</div>
 				<div className="description-equipments-wrapper">
 					<Collapse
 						title="Description"
