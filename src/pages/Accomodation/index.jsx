@@ -5,6 +5,7 @@ import './index.css'
 import Error from '../../pages/Error'
 import Rating from '../../components/Rating'
 import Slideshow from '../../components/Slideshow'
+import Tag from '../../components/Tag'
 
 function Accomodation(){
     const { accomodationId } = useParams()
@@ -27,6 +28,11 @@ function Accomodation(){
 						<p className="accomodation-location">
 							{accomodation.location}
 						</p>
+						<div className="tag-wrapper">
+							{accomodation.tags.map((tag, index) => (
+								<Tag tagName={tag} key={`${tag}-${index}`} />
+							))}
+						</div>
 					</div>
 					<div className="rating-host-wrapper">
 						<Rating rating={accomodation.rating} />
