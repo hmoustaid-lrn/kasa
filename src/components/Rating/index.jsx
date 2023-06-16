@@ -1,4 +1,5 @@
-import star from '../../assets/star.svg'
+import starActive from '../../assets/star-active.png'
+import starInactive from '../../assets/star-inactive.png'
 
 import './index.css'
 
@@ -14,15 +15,15 @@ function Rating({ rating }) {
 				<img
 					className="star"
 					key={'full-star-' + i}
-					src={star}
+					src={starActive}
 					alt="Full Star Rating"
 				/>
 			))}
 			{[...Array(emptyStarNumber)].map((e, i) => (
 				<img
-					className="star-empty"
+					className="star"
 					key={'empty-star-' + i}
-					src={star}
+					src={starInactive}
 					alt="Empty Star Rating"
 				/>
 			))}

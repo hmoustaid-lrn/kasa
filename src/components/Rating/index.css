@@ -1,17 +1,14 @@
-.star,
-.star-empty {
+.star{
 	width: 0.9375rem;
 	height: 0.9375rem;
 	margin-right: 0.3125rem;
-    color: #e3e3e3;
 }
+
 @media only screen and (min-width: 768px) {
-    .star,
-    .star-empty {
+    .star{
 	    width: 1.875rem;
 		height: 1.875rem;
 		margin-right: 0.625rem;
-	    color: #ff6060;
     }
 }
 
