@@ -4,6 +4,7 @@ import Collapse from '../../components/Collapse'
 import './index.css'
 import Error from '../../pages/Error'
 import Rating from '../../components/Rating'
+import Slideshow from '../../components/Slideshow'
 
 function Accomodation(){
     const { accomodationId } = useParams()
@@ -19,7 +20,7 @@ function Accomodation(){
 		document.title = accomodation.title + ' - Kasa'
     return(
         <section>
-            <img src={accomodation.pictures[0]} alt= "test" class="image"/>
+            	<Slideshow images={accomodation.pictures} />
 				<div className="annonce-info-rating-host-wrapper">
 					<div className="accomodation-info-wrapper">
 						<h1 className="accomodation-title">{accomodation.title}</h1>
