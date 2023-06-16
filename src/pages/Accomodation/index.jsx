@@ -22,7 +22,7 @@ function Accomodation(){
     return(
         <section>
             	<Slideshow images={accomodation.pictures} />
-				<div className="annonce-info-rating-host-wrapper">
+				<div className="accomodation-info-rating-host-wrapper">
 					<div className="accomodation-info-wrapper">
 						<h1 className="accomodation-title">{accomodation.title}</h1>
 						<p className="accomodation-location">
