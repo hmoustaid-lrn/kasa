@@ -1,13 +1,18 @@
-import { useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 import logements from '../../data/data.json'
 import Collapse from '../../components/Collapse'
 import './index.css'
+import Error from '../../pages/Error'
 
 function Accomodation(){
     const { accomodationId } = useParams()
     let accomodation = logements.find(
         (logement) => logement.id === accomodationId
     )
+
+	if(!accomodation){
+		return <Error />
+	}
 
     const [firstName, lastName] = accomodation.host.name.split(' ')
 		document.title = accomodation.title + ' - Kasa'
