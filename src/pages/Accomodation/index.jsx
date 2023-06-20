@@ -1,27 +1,31 @@
-import {useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from "react";
 import logements from '../../data/data.json'
 import Collapse from '../../components/Collapse'
 import './index.css'
-import Error from '../../pages/Error'
 import Rating from '../../components/Rating'
 import Slideshow from '../../components/Slideshow'
 import Tag from '../../components/Tag'
 
-function Accomodation(){
-    const { accomodationId } = useParams()
-    let accomodation = logements.find(
-        (logement) => logement.id === accomodationId
-    )
+function Accomodation() {
+	const { accomodationId } = useParams()
+	let accomodation = logements.find(
+		(logement) => logement.id === accomodationId
+	)
+	const navigate = useNavigate();
+	useEffect(() => {
+		if (accomodation === undefined) {
+			navigate('/error');
+		}
 
-	if(!accomodation){
-		return <Error />
-	}
+	})
 
-    const [firstName, lastName] = accomodation.host.name.split(' ')
+	if (accomodation) {
+		const [firstName, lastName] = accomodation.host.name.split(' ')
 		document.title = accomodation.title + ' - Kasa'
-    return(
-        <section>
-            	<Slideshow images={accomodation.pictures} />
+		return (
+			<section>
+				<Slideshow images={accomodation.pictures} />
 				<div className="accomodation-info-rating-host-wrapper">
 					<div className="accomodation-info-wrapper">
 						<h1 className="accomodation-title">{accomodation.title}</h1>
@@ -60,10 +64,13 @@ function Accomodation(){
 						content={accomodation.equipments}
 					/>
 				</div>
-        </section>
-        
-        
-    )
+			</section>
+
+
+		)
+	}
+
+
 }
 
 export default Accomodation
