@@ -41,8 +41,8 @@ function Collapse({ title, content }) {
 			</button>
 			<div ref={contentCollapse} className="collapse-content" style={{ maxHeight: `${height}` }}>
 				<div className="collapse-text">
-					{contentArray.map(content => (
-						<div>{content}</div>
+					{contentArray.map((content, index) => (
+						<div key={`${content}-${index}`}>{content}</div>
 					))}
 				</div>
 			</div>
